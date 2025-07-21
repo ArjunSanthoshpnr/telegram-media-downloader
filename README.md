@@ -36,14 +36,20 @@ cd telegram-media-downloader
 npm install
 ```
 
-3. **Install yt-dlp**
+3. _(Optional, for development)_ **Install nodemon**
+
+```bash
+npm install --save-dev nodemon
+```
+
+4. **Install yt-dlp**
 
 ```bash
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp
 ```
 
-4. **Create `.env` file**
+5. **Create `.env` file**
 
 ```env
 BOT_TOKEN=your_telegram_bot_token
@@ -62,7 +68,13 @@ CHANNEL_ID=@your_channel_username_or_id
 npm start
 ```
 
-2. **Send the bot a command** like:
+2. **For development (auto-restart on changes)**
+
+```bash
+npm run dev
+```
+
+3. **Send the bot a command** like:
 
 ```
 /download https://youtube.com/your-video-link
