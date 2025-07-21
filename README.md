@@ -15,6 +15,14 @@ A Telegram bot built using [Telegraf.js](https://telegraf.js.org/) that can down
 
 ## 🛠 Installation
 
+### Prerequisites
+
+- **yt-dlp** must be installed (see below)
+- **ffmpeg** must be installed and available in your system PATH
+  - On Ubuntu/Debian: `sudo apt install ffmpeg`
+  - On Mac: `brew install ffmpeg`
+  - On Windows: [Download from ffmpeg.org](https://ffmpeg.org/download.html)
+
 1. **Clone the repo**
 
 ```bash
@@ -41,6 +49,7 @@ sudo chmod a+rx /usr/local/bin/yt-dlp
 BOT_TOKEN=your_telegram_bot_token
 CHANNEL_ID=@your_channel_username_or_id
 ```
+
 > For private channels, use the internal ID with `-100` prefix (e.g. `-1001234567890`).
 
 ---
@@ -50,7 +59,7 @@ CHANNEL_ID=@your_channel_username_or_id
 1. **Start the bot**
 
 ```bash
-node bot.js
+npm start
 ```
 
 2. **Send the bot a command** like:
